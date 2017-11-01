@@ -18,3 +18,8 @@ list:
 ("Person 3",12)
 ("Person 4",20)
 my_list.sort(key=lambda x: x[1])
+
+
+we have some wrong code, when using Chinese character in the output file:
+we can use ' '.join like this to solve the problem
+res.append('\t'.join(data))
