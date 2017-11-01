@@ -5,3 +5,5 @@ functionality and allows programming Spark with DataFrame and Dataset APIs.
 Whereas in Spark 2.0 the same effects can be achieved through SparkSession, 
 without expliciting creating SparkConf, SparkContext or SQLContext, 
 as they’re encapsulated within the SparkSession. 
+
+two data sets join in spark:
