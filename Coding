@@ -7,3 +7,14 @@ without expliciting creating SparkConf, SparkContext or SQLContext,
 as they’re encapsulated within the SparkSession. 
 
 two data sets join in spark:
+
+
+
+
+sort tuple list by second element:
+list:
+("Person 1",10)
+("Person 2",8)
+("Person 3",12)
+("Person 4",20)
+my_list.sort(key=lambda x: x[1])
