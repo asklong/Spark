@@ -28,3 +28,6 @@ res.append('\t'.join(data))
 when we use map or flatmap, if we have data, we should return something.
 we can't just return, or we will get NoneType error.
 so we could return ' ', then we use filter to filter the ' ' value.
+
+
+when we out put the result, we should out the result as a string, and use ',' to separate the fields.
