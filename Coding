@@ -31,3 +31,13 @@ so we could return ' ', then we use filter to filter the ' ' value.
 
 
 when we out put the result, we should out the result as a string, and use ',' to separate the fields.
+
+
+bug:
+Driver stacktrace:
+Caused by: java.io.IOException: Stream is corrupted
+	at org.apache.spark.io.LZ4BlockInputStream.refill(LZ4BlockInputStream.java:163)
+	at org.apache.spark.io.LZ4BlockInputStream.read(LZ4BlockInputStream.java:125)
+	at com.esotericsoftware.kryo.io.Input.fill(Input.java:164)
+ We have too much data in each partation, like: training_data.repartition(100).saveAsTextFile("/path")
+ So, we just delete the repartation part: training_data.saveAsTextFile("/path")
