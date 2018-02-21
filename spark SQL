@@ -6,3 +6,6 @@ from HelpCenterSearchResultsViewEvent
 lateral view explode(resultsEntities) exploded_resultsEntities as resultsEntitie
 where size(resultsEntities) > 0 and datepartition='2018-01-01-00'
 ;
+
+3. when compare with two strings, if one is not string we could cast it to string:
+cast(helpCenterEventHeader.currentPageTrackingId as string)
