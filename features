@@ -1,4 +1,4 @@
 1. local parameter for each partation:
 val counter = sc.longAccumulator("counter")
 sc.parallelize(1 to 9).foreach(x => counter.add(x))
-link: https://jaceklaskowski.gitbooks.io/mastering-apache-spark/spark-accumulators.html
+https://jaceklaskowski.gitbooks.io/mastering-apache-spark/spark-accumulators.html
